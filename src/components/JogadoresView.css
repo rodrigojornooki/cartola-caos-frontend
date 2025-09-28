@@ -1,0 +1,218 @@
+.jogadores-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.jogadores-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.jogadores-header h1 {
+  color: #333;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-back {
+  background: transparent;
+  color: #007AFF;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+  background: rgba(0, 122, 255, 0.1);
+}
+
+.error-message {
+  background: #FF3B30;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #666;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007AFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.jogadores-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jogador-card {
+  background: white;
+  border: 1px solid #E5E5EA;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jogador-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.jogador-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.jogador-posicao {
+  flex-shrink: 0;
+}
+
+.posicao-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.jogador-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.jogador-nome {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.jogador-posicao-nome {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.jogador-pontuacao {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.jogador-pontuacao.positiva {
+  color: #34C759;
+}
+
+.jogador-pontuacao.negativa {
+  color: #FF3B30;
+}
+
+.jogador-foto {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #F2F2F7;
+}
+
+.jogador-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-state p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #007AFF;
+  border: 2px solid #007AFF;
+}
+
+.btn-outline:hover {
+  background: #007AFF;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .jogadores-view {
+    padding: 16px;
+  }
+  
+  .jogadores-header {
+    grid-template-columns: auto 1fr auto;
+  }
+  
+  .jogadores-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .jogador-info {
+    gap: 12px;
+  }
+  
+  .jogador-foto {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .jogador-nome {
+    font-size: 16px;
+  }
+}

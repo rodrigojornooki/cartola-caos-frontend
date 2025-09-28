@@ -1,0 +1,24 @@
+/* Reset e base styles */
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0;
+  margin: 0;
+}
+
+/* Global container para todos os views */
+.app > div {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .app {
+    padding: 0;
+  }
+}

@@ -1,0 +1,226 @@
+.jogos-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.jogos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.jogos-header h1 {
+  color: #333;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: #007AFF;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #005FD9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #FF9500;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #E8840B;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #007AFF;
+  border: 2px solid #007AFF;
+}
+
+.btn-outline:hover {
+  background: #007AFF;
+  color: white;
+}
+
+.error-message {
+  background: #FF3B30;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #666;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007AFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.jogos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.jogo-card {
+  background: white;
+  border: 1px solid #E5E5EA;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jogo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 120px;
+}
+
+.escudo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.team-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.vs {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  padding: 8px 12px;
+  background: #F2F2F7;
+  border-radius: 6px;
+}
+
+.jogo-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.horario {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-state p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .jogos-view {
+    padding: 16px;
+  }
+  
+  .jogos-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .jogos-header h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .action-buttons {
+    justify-content: center;
+  }
+  
+  .teams {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .vs {
+    order: -1;
+  }
+  
+  .jogo-details {
+    justify-content: center;
+    text-align: center;
+  }
+}
